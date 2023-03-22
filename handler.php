@@ -10,25 +10,29 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
     <link rel="manifest" href="./favicon/site.webmanifest" />
-    <title>AREA AND CIRCUMFERENCE CALCUATOR</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>ANSWER</title>
   </head>
 
   <body>
-
-    <h1>Enter Diameter</h1>
-
-    <form action="https://tkinson.net/ics2o/handler.php" method="post">
-
-      <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="text" name="d" id="sample1">
-        <label class="mdl-textfield__label" for="sample1">DIAMETER</label>
-      </div>
-      
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-          SUBMIT
-      </button>
-
-    </form>
+    
+    <?php
+    $d = $_POST['d'];
+    if (strspn($d, '1234567890'))
+    {
+        $r = $_POST['d']/2;
+        echo "
+            <p>
+                The radius of the circle is:" .$_POST['d']/2, "<br>",
+                "The area of the circle is:" .$r*$r*M_PI, "<br>",
+                "The circumference of the circle is:" .$r*M_PI*2,
+            "</p>";
+    }
+    else
+    {
+        echo "<h1>INVALID INPUT</h1>";
+    }
+    ?>
     
   </body>
   
