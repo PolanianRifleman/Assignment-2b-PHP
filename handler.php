@@ -23,10 +23,10 @@
         $r = $_POST['d']/2;
         echo "
             <p>
-                The diameter of the circle is:" .$_POST['d'], "<br>",
-                "The radius of the circle is:" .$_POST['d']/2, "<br>",
-                "The area of the circle is:" .$r*$r*M_PI, "<br>",
-                "The circumference of the circle is:" .$r*M_PI*2,
+                The diameter of the circle is: " .$_POST['d'], "<br>",
+                "The radius of the circle is: " .$_POST['d']/2, "<br>",
+                "The area of the circle is: " .$r*$r*M_PI, "<br>",
+                "The circumference of the circle is: " .$r*M_PI*2,
             "</p>";
     }
     else
