@@ -28,6 +28,10 @@
                 "The area of the circle is: " .$r*$r*M_PI, "<br>",
                 "The circumference of the circle is: " .$r*M_PI*2,
             "</p>";
+    
+    if (strspn($d, 'glognut'))
+            echo "
+            <h1> GET OUT OF HERE HARRIS</h1>";
     }
     else
     {
